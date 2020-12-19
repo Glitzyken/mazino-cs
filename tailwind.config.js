@@ -9,9 +9,13 @@ module.exports = {
     colors: {
       mazPrime1: '#050505',
       mazPrime2: '#2b2a28',
+      mazPrime3: '#6c5646',
       mazSec: '#e29f51',
       mazGray1: '#d1c9be',
       mazGray2: '#302e2f'
+    },
+    letterSpacing: {
+      widest: '.35em'
     }
   },
   variants: {},
