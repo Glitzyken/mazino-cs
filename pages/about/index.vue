@@ -17,6 +17,14 @@
           >You are more than a guest. You are our model.</span
         >
       </p>
+      <div class="text-center">
+        <nuxt-link to="/book">
+          <Button
+            displayTitle="Book a makeover appointment"
+            iconName="map-marked-alt"
+          />
+        </nuxt-link>
+      </div>
     </div>
   </div>
 </template>
