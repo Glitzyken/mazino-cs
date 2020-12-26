@@ -42,22 +42,6 @@ export default {
 </script> -->
 
 <!-- <style lang="scss">
-// GLOBAL STYLES
-.card {
-  position: relative;
-  min-height: 23rem;
-  box-shadow: 0 0.332071px 2.21381px rgba(0, 0, 0, 0.0119),
-    0 0.798012px 5.32008px rgba(0, 0, 0, 0.0258),
-    0 1.50259px 10.0172px rgba(0, 0, 0, 0.0368),
-    0 2.68036px 17.869px rgba(0, 0, 0, 0.0479),
-    0 5.01331px 33.4221px rgba(0, 0, 0, 0.0621), 0 12px 80px rgba(0, 0, 0, 0.09);
-  border-radius: 0.5rem;
-  transition: all 0.2s;
-
-  &:hover {
-    transform: translateY(-5px);
-  }
-}
 
 // PAGE TRANSITION CLASS
 .page-enter-active,
