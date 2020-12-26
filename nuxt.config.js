@@ -62,5 +62,9 @@ export default {
     icons: {
       solid: ['faCog', 'faMapMarkedAlt']
     }
+  },
+  pageTransition: {
+    name: 'page',
+    mode: 'out-in'
   }
 };

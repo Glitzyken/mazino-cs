@@ -41,9 +41,7 @@ export default {
 };
 </script> -->
 
-<!-- <style lang="scss">
-
-// PAGE TRANSITION CLASS
+<style>
 .page-enter-active,
 .page-leave-active {
   transition: all 0.3s;
@@ -57,4 +55,4 @@ export default {
   opacity: 0;
   transform: translateX(-25px);
 }
-</style> -->
+</style>
