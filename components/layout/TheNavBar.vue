@@ -6,6 +6,7 @@
 
     <div class="hidden md:inline-block">
       <ul class="text-mazPrime3 uppercase tracking-widest font-bold flex">
+        <li class="mr-10">book</li>
         <li class="mr-10">about</li>
         <li>
           <nuxt-link to="/find">

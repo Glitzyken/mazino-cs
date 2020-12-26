@@ -17,14 +17,13 @@
       </div>
       <a :href="origin"
         ><button
-          class="mt-20 bg-mazSec hover:bg-mazPrime3 transition duration-150 text-mazPrime1 font-bold py-2 px-5"
+          class="mt-20 bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5"
         >
-          Get direction with a map 🗺
-        </button></a
-      >
+          Get direction with a map
+          <font-awesome-icon icon="map-marked-alt" /></button
+      ></a>
     </div>
-    <!--Pinnock+Beach+Estate%2+Lekki%2+EDM+Centre%2+Poise+Building%2+5A+Pinnock+Beach+Estate%2+Jakande%2+Lekki%2+Lekki+Penninsula+II%2+Lekki 
-            
+    <!--
             6.487235998869074, 3.1700832681201323
             -->
   </div>
@@ -37,7 +36,7 @@ export default {
       latitude: '',
       longitude: '',
       origin:
-        'https://www.google.com/maps/dir/?api=1&origin=6.487235998869074,3.1700832681201323&destination=Pinnock+Beach+Estate%2+Lekki%2+EDM+Centre%2+Poise+Building%2+5A+Pinnock+Beach+Estate%2+Jakande%2+Lekki%2+Lekki+Penninsula+II%2+Lekki'
+        'https://www.google.com/maps/dir/?api=1&destination=Pinnock+Beach+Estate%2+Lekki%2+EDM+Centre%2+Poise+Building%2+5A+Pinnock+Beach+Estate%2+Jakande%2+Lekki%2+Lekki+Penninsula+II%2+Lekki'
     };
   },
   methods: {
