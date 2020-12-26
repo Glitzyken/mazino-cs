@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-between items-center">
+  <div class="flex justify-between items-center mb-10">
     <nuxt-link to="/"
       ><img class="w-10 md:w-16" src="../../assets/images/logo.png" alt="logo"
     /></nuxt-link>
