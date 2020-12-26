@@ -18,12 +18,19 @@
         >
       </p>
       <div class="text-center">
-        <nuxt-link to="/book">
+        <nuxt-link to="/booking">
           <Button
             displayTitle="Book a makeover appointment"
             iconName="map-marked-alt"
           />
         </nuxt-link>
+      </div>
+      <div>
+        [Zino's photo]
+      </div>
+      <div>
+        <h2>CEO</h2>
+        <p>Meet Zino Eriyamremu, CEO Mazino Makeovers.</p>
       </div>
     </div>
   </div>
