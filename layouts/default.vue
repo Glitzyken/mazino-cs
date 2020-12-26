@@ -16,8 +16,9 @@
           </div>
         </div>
       </div>
-      <div class="md:max-w-6xl md:m-auto p-2 md:p-8 text-mazGray2">
+      <div class="mt-10">
         <!-- <TheFooter /> -->
+        <TheFooter />
       </div>
     </div>
   </div>
