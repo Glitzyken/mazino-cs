@@ -2,7 +2,9 @@
   <div>
     <!-- <PreLoader v-if="showHideSpinner" /> -->
 
-    <div class="md:bg-gradient-to-br from-mazGray1 to-mazGray2 md:py-16">
+    <div
+      class="md:bg-gradient-to-br from-mazGray1 to-mazGray2 md:py-16 min-h-screen"
+    >
       <div
         class="bg-gradient-to-br from-mazPrime2 to-mazPrime1 md:max-w-6xl md:m-auto p-2 md:p-8 text-mazGray1 md:shadow-2xl"
       >
