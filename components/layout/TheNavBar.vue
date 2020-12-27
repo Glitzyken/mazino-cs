@@ -1,10 +1,10 @@
 <template>
   <div class="flex justify-between items-center mb-10">
     <nuxt-link to="/"
-      ><img class="w-10 md:w-16" src="../../assets/images/logo.png" alt="logo"
+      ><img class="w-3/5 md:w-2/5" src="../../assets/images/logo.png" alt="logo"
     /></nuxt-link>
 
-    <div class="hidden md:inline-block">
+    <div class="hidden md:block md:w-2/4">
       <ul class="text-mazPrime3 uppercase tracking-widest font-bold flex">
         <nuxt-link to="/booking">
           <li class="mr-10">book</li>
