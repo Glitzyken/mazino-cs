@@ -26,7 +26,7 @@
           <Button
             class="-mt-5"
             displayTitle="Book a makeover appointment"
-            iconName="map-marked-alt"
+            iconName="address-book"
           />
         </nuxt-link>
       </div>
