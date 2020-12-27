@@ -21,5 +21,8 @@
         </li>
       </ul>
     </div>
+
+    <!--Menu visible on mobile devices-->
+    <Menu class="md:hidden" />
   </div>
 </template>
