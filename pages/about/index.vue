@@ -1,7 +1,11 @@
 <template>
   <div>
-    <div class="flex justify-center mb-5">
-      <img src="../../assets/images/team-makeup.jpg" alt="Mazino team" />
+    <div class="flex mb-5">
+      <img
+        class="w-full"
+        src="../../assets/images/team-makeup.jpg"
+        alt="Mazino team"
+      />
     </div>
     <h1 class="text-center font-bold text-4xl mb-5 leading-tight">
       We are <span class="text-6xl text-mazSec font-extrabold"> [classy] </span>
