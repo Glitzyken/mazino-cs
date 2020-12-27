@@ -1,8 +1,10 @@
 <template>
   <div class="flex justify-between items-center mb-10">
-    <nuxt-link to="/"
-      ><img class="w-3/5 md:w-2/5" src="../../assets/images/logo.png" alt="logo"
-    /></nuxt-link>
+    <div class="bg-mazPrime2 w-3/5 md:w-2/6 pr-5">
+      <nuxt-link to="/"
+        ><img src="../../assets/images/logo.png" alt="logo"
+      /></nuxt-link>
+    </div>
 
     <div class="hidden md:flex justify-end md:w-3/4">
       <ul class="text-mazPrime3 uppercase tracking-widest font-bold flex">
