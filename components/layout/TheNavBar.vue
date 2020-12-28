@@ -23,6 +23,6 @@
     </div>
 
     <!--Menu visible on mobile devices-->
-    <Menu class="md:hidden" />
+    <Menu class="md:hidden text-3xl" />
   </div>
 </template>

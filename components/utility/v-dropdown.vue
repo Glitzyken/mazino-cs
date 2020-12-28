@@ -28,6 +28,7 @@
         class="absolute shadow-lg border border-mazPrime3 w-48 rounded py-1 px-2 text-sm mt-4 bg-gradient-to-br from-mazPrime2 to-mazPrime1 z-10"
         :class="placement === 'right' ? 'right-0' : 'left-0'"
         v-if="open"
+        @click="open = false"
       >
         <slot name="content"></slot>
       </div>
@@ -48,19 +49,6 @@ export default {
       default: 'right',
       validator: value => ['right', 'left'].indexOf(value) !== -1
     }
-  },
-  mounted() {
-    const onEscape = e => {
-      if (e.key === 'Esc' || e.key === 'Escape') {
-        this.open = false;
-      }
-    };
-
-    document.addEventListener('keydown', onEscape);
-
-    this.$once('hook:beforeDestroy', () => {
-      document.removeEventListener('keydown', onEscape);
-    });
   }
 };
 </script>

@@ -7,27 +7,29 @@
 
     <!-- Opened dropdown content -->
     <template v-slot:content>
-      <div
-        class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
-      >
-        <nuxt-link to="/booking">
+      <nuxt-link to="/booking">
+        <div
+          class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
+        >
           book
-        </nuxt-link>
-      </div>
-      <div
-        class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
-      >
-        <nuxt-link to="/about">
+        </div>
+      </nuxt-link>
+
+      <nuxt-link to="/about">
+        <div
+          class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
+        >
           about
-        </nuxt-link>
-      </div>
-      <div
-        class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
-      >
-        <nuxt-link to="/find">
+        </div>
+      </nuxt-link>
+
+      <nuxt-link to="/find">
+        <div
+          class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
+        >
           find us
-        </nuxt-link>
-      </div>
+        </div>
+      </nuxt-link>
     </template>
   </v-dropdown>
 </template>
