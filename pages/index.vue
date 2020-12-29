@@ -1,5 +1,5 @@
 <template>
   <div>
-    <img src="../assets/images/hero-woman.png" alt="hero woman" />
+    <Hero />
   </div>
 </template>
