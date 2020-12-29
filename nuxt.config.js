@@ -60,14 +60,7 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: [
-        'faCog',
-        'faMapMarkedAlt',
-        'faAddressBook',
-        'faBars',
-        'faCaretDown',
-        'faEllipsisV'
-      ]
+      solid: ['faAddressBook', 'faBars', 'faDirections']
     }
   },
   pageTransition: {

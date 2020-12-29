@@ -16,10 +16,7 @@
         </p>
       </div>
       <a :href="origin">
-        <Button
-          displayTitle="Get direction with a map"
-          iconName="map-marked-alt"
-        />
+        <Button displayTitle="get directions" iconName="directions" />
       </a>
     </div>
     <!--

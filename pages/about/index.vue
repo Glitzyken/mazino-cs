@@ -25,7 +25,7 @@
         <nuxt-link to="/booking">
           <Button
             class="-mt-5"
-            displayTitle="Book a makeover appointment"
+            displayTitle="book a makeover appointment"
             iconName="address-book"
           />
         </nuxt-link>
