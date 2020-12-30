@@ -5,7 +5,10 @@
     </div>
     <div class="flex justify-center items-center">
       <div class="text-center mt-5 md:mt-0">
-        <quote class="text-2xl md:text-4xl text-mazSec font-bold leading-none">
+        <quote
+          id="quotes"
+          class="text-2xl md:text-4xl text-mazSec font-bold leading-none"
+        >
           "{{ quotesWithAuthors[0].quote }}"
           <span class="block text-lg md:text-2xl text-mazGray1 leading-loose">
             – {{ quotesWithAuthors[0].author }}
