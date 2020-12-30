@@ -1,4 +1,8 @@
-[
+export default [
+  {
+    quote: 'Your eye makeup says so much about you and your style',
+    author: 'Laura Mercier'
+  },
   {
     quote: 'A smile is the best makeup any girl can wear',
     author: 'Marilyn Monroe'
@@ -27,10 +31,6 @@
     quote:
       'Creativity is your best makeup skill, don’t be afraid to experiment',
     author: 'Pat McGrath'
-  },
-  {
-    quote: 'Your eye makeup says so much about you and your style',
-    author: 'Laura Mercier'
   },
   {
     quote:

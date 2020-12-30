@@ -6,9 +6,9 @@
     <div class="flex justify-center items-center">
       <div class="text-center mt-5 md:mt-0">
         <quote class="text-2xl md:text-4xl text-mazSec font-bold leading-none">
-          "A smile is the best makeup any girl can wear"
+          "{{ quotesWithAuthors[0].quote }}"
           <span class="block text-lg md:text-2xl text-mazGray1 leading-loose">
-            – Marilyn Monroe
+            – {{ quotesWithAuthors[0].author }}
           </span>
         </quote>
         <div>
@@ -27,3 +27,26 @@
     </div>
   </div>
 </template>
+
+<script>
+import quotes from '../../docs/quotes';
+
+export default {
+  data() {
+    return {
+      quotesWithAuthors: quotes
+    };
+  },
+  mounted() {
+    window.setInterval(() => {
+      this.getQuoteAndAuthor();
+    }, 5000);
+  },
+  methods: {
+    getQuoteAndAuthor() {
+      const first = this.quotesWithAuthors.shift();
+      this.quotesWithAuthors = this.quotesWithAuthors.concat(first);
+    }
+  }
+};
+</script>
