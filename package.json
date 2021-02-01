@@ -13,7 +13,8 @@
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@nuxtjs/fontawesome": "^1.1.2",
-    "nuxt": "^2.13.0"
+    "nuxt": "^2.13.0",
+    "vue-slick-carousel": "^1.0.6"
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^2.0.0"
