@@ -12,16 +12,14 @@
       </p>
       <div class="bg-mazPrime1 shadow-lg">
         <p class="p-5">
-          14, Erinfolami Street, Mebamu, Off Badagary Road, Ojo, Lagos.
+          28, Adelegan Street, behind A.P filling station, Ibeshe Titun Ikorodu,
+          Lagos.
         </p>
       </div>
       <a :href="origin">
         <Button displayTitle="get directions" iconName="directions" />
       </a>
     </div>
-    <!--
-            6.487235998869074, 3.1700832681201323
-            -->
   </div>
 </template>
 
@@ -29,14 +27,9 @@
 export default {
   data() {
     return {
-      latitude: '',
-      longitude: '',
       origin:
-        'https://www.google.com/maps/dir/?api=1&destination=Pinnock+Beach+Estate%2+Lekki%2+EDM+Centre%2+Poise+Building%2+5A+Pinnock+Beach+Estate%2+Jakande%2+Lekki%2+Lekki+Penninsula+II%2+Lekki'
+        'https://www.google.com/maps/dir/?api=1&destination=28+Adelegan+St,+Ikorodu'
     };
-  },
-  methods: {
-    getUserCoordinates() {}
   }
 };
 </script>
