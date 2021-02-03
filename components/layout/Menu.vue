@@ -11,7 +11,7 @@
         <div
           class="flex w-full justify-between items-center px-2 py-1 my-1 text-mazPrime3 uppercase tracking-widest font-bold hover:bg-mazSec hover:text-mazPrime1"
         >
-          book
+          booking
         </div>
       </nuxt-link>
 

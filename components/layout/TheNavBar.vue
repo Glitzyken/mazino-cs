@@ -9,7 +9,7 @@
     <div class="hidden md:flex justify-end md:w-3/4">
       <ul class="text-mazPrime3 uppercase tracking-widest font-bold flex">
         <nuxt-link to="/booking">
-          <li class="mr-10">book</li>
+          <li class="mr-10">booking</li>
         </nuxt-link>
         <nuxt-link to="/about">
           <li class="mr-10">about</li>
