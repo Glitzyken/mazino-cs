@@ -1,5 +1,5 @@
 <template>
-  <div
+  <footer
     class="bg-gradient-to-br from-mazPrime2 to-mazPrime1 md:max-w-6xl md:m-auto py-10 md:p-12 text-mazGray1 md:shadow-2xl flex flex-col md:flex-row justify-between items-center"
   >
     <nuxt-link to="/"
@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-  </div>
+  </footer>
 </template>
 
 <script>
