@@ -14,10 +14,7 @@
           </div>
         </div>
       </div>
-      <div class="mt-10">
-        <!-- <TheFooter /> -->
-        <TheFooter />
-      </div>
+      <TheFooter />
     </div>
   </div>
 </template>

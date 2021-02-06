@@ -16,7 +16,7 @@
         <nuxt-link to="/find">
           <li class="md:ml-10">contact</li>
         </nuxt-link>
-        <nuxt-link to="/">
+        <nuxt-link to="/privacy-policy">
           <li class="md:ml-10">privacy policy</li>
         </nuxt-link>
       </ul>
