@@ -16,7 +16,7 @@
         </nuxt-link>
         <li>
           <nuxt-link to="/find">
-            find us
+            find
           </nuxt-link>
         </li>
       </ul>
