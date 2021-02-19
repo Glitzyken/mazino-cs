@@ -17,8 +17,15 @@
         </p>
       </div>
       <a :href="origin">
-        <Button displayTitle="get directions" iconName="directions" />
+        <Button
+          class="mt-20"
+          displayTitle="get directions"
+          iconName="directions"
+        />
       </a>
+    </div>
+    <div class="py-10 col-span-3">
+      <ContactForm />
     </div>
   </div>
 </template>

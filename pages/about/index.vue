@@ -24,7 +24,6 @@
       <div class="flex justify-center items-center">
         <nuxt-link to="/booking">
           <Button
-            class="-mt-5"
             displayTitle="book a makeover appointment"
             iconName="address-book"
           />

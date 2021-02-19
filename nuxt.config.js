@@ -1,13 +1,6 @@
 export default {
-  /*
-   ** Nuxt rendering mode
-   ** See https://nuxtjs.org/api/configuration-mode
-   */
-  mode: 'spa',
-  /*
-   ** Nuxt target
-   ** See https://nuxtjs.org/api/configuration-target
-   */
+  ssr: true,
+
   target: 'static',
   /*
    ** Headers of the page
@@ -51,7 +44,12 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [],
+  modules: ['@nuxtjs/axios'],
+
+  axios: {
+    baseURL: 'https://va-services.herokuapp.com/' // Used as fallback if no runtime config is provided
+  },
+
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
