@@ -10,9 +10,9 @@
       </span>
     </h1>
 
-    <p class="text-2xl text-center mx-5 mb-5 md:mx-10 leading-8">
+    <h2 class="text-2xl text-center mx-5 mb-5 md:mx-10 leading-8">
       Got a question or proposal, or just want to say hello? Go ahead.
-    </p>
+    </h2>
 
     <form>
       <label class="text-mazSec text-xl font-bold" for="name">Your Name</label>

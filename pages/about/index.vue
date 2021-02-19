@@ -22,7 +22,7 @@
         >
       </p>
       <div class="flex justify-center items-center">
-        <nuxt-link to="/booking">
+        <nuxt-link to="/services">
           <Button
             displayTitle="book a makeover appointment"
             iconName="address-book"
@@ -36,6 +36,8 @@
         <h2>CEO</h2>
         <p>Meet Zino Eriyamremu, CEO Mazino Makeovers.</p>
       </div>
+      TODO:
+      <h1>FOLLOW US ON INSTAGRAM</h1>
     </div>
   </div>
 </template>

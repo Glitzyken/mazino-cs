@@ -29,7 +29,7 @@
               why mazino?
             </button>
           </nuxt-link>
-          <nuxt-link to="/booking">
+          <nuxt-link to="/services">
             <Button displayTitle="book now" />
           </nuxt-link>
         </div>
