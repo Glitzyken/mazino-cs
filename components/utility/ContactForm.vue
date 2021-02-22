@@ -14,14 +14,20 @@
       Got a question or proposal, or just want to say hello? Go ahead.
     </h2>
 
-    <form>
-      <label class="text-mazSec text-xl font-bold" for="name">Your Name</label>
+    <form class="mt-10">
+      <label class="text-mazSec text-xl font-bold" for="name" v-if="name"
+        >Nice to meet you {{ name }} 👋
+      </label>
+      <label class="text-mazSec text-xl font-bold" for="name" v-else
+        >Your Name
+      </label>
       <input
         id="name"
         class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
         type="text"
         placeholder="Victoria Eloho"
         required
+        v-model="name"
       />
 
       <label class="text-mazSec text-xl font-bold" for="email"
@@ -33,21 +39,55 @@
         type="email"
         placeholder="you@example.com"
         required
+        v-model="email"
       />
 
-      <label class="text-mazSec text-xl font-bold" for="name"
+      <label class="text-mazSec text-xl font-bold" for="message"
         >Your Message</label
       >
       <textarea
-        id="name"
-        class="w-full border-none px-4 py-2 rounded outline-none resize-none bg-mazGray2"
+        id="message"
+        class="w-full border-none px-4 py-2 rounded outline-none resize-none bg-mazGray2 whitespace-pre"
         type="text"
         placeholder="Hi, I think we need a colaboration. How soon can you hop on to discuss this?"
         rows="4"
         required
+        v-model="message"
       ></textarea>
 
-      <Button class="mt-4 w-full" displayTitle="shoot" iconName="directions" />
+      <button
+        class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize mt-4 w-full"
+        type="submit"
+        @click.prevent="sendMessage"
+      >
+        shoot
+      </button>
     </form>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: '',
+      email: '',
+      message: ''
+    };
+  },
+  methods: {
+    sendMessage() {
+      const data = {
+        name: this.name,
+        email: this.email,
+        message: this.message
+      };
+
+      this.name = '';
+      this.email = '';
+      this.message = '';
+      console.log(data);
+    }
+  }
+};
+</script>
