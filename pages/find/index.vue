@@ -1,6 +1,6 @@
 <template>
   <div class="grid grid-cols-1 md:grid-cols-3 md:gap-4">
-    <div class="col-span-2">
+    <div class="md:col-span-2">
       <img
         src="../../assets/images/studio-1.jpg"
         alt="Mazino Makeovers Studio"
@@ -24,7 +24,7 @@
         />
       </a>
     </div>
-    <div class="py-10 col-span-3">
+    <div class="py-10 md:col-span-3">
       <ContactForm />
     </div>
   </div>
