@@ -3,7 +3,7 @@
     class="flex justify-center items-center h-24 w-screen md:w-1/4 bg-mazSec fixed z-50 text-mazPrime1 md:text-xl px-5 text-center font-bold alert"
   >
     {{ message }}
-    <span class="ml-2"><font-awesome-icon icon="check-square"/></span>
+    <span class="ml-2"><font-awesome-icon :icon="iconName"/></span>
   </div>
 </template>
 
@@ -11,8 +11,10 @@
 export default {
   props: {
     message: {
-      type: String,
-      required: true
+      type: String
+    },
+    iconName: {
+      type: String
     }
   }
 };

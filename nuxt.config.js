@@ -46,10 +46,6 @@ export default {
    */
   modules: ['@nuxtjs/axios'],
 
-  axios: {
-    baseURL: 'https://va-services.herokuapp.com/' // Used as fallback if no runtime config is provided
-  },
-
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
@@ -63,7 +59,8 @@ export default {
         'faBars',
         'faDirections',
         'faCheckSquare',
-        'faArrowCircleRight'
+        'faArrowCircleRight',
+        'faBug'
       ]
     }
   },

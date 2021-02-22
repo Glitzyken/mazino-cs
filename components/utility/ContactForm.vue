@@ -1,6 +1,15 @@
 <template>
   <div class="px-2 m-auto max-w-xl">
-    <AlertMessage v-if="messageSent" message="Message sent!" />
+    <AlertMessage
+      v-if="messageSent"
+      message="Message sent!"
+      iconName="check-square"
+    />
+    <AlertMessage
+      v-if="messageNotSent"
+      message="Something went wrong"
+      iconName="bug"
+    />
     <h1
       class="block text-center font-bold text-4xl mb-5 leading-tight"
       for="input2"
@@ -81,6 +90,7 @@
 </template>
 
 <script>
+import axios from 'axios';
 import { required, email } from 'vuelidate/lib/validators';
 
 export default {
@@ -93,7 +103,8 @@ export default {
       isEmptyEmail: false,
       isEmptyMessage: false,
       isInvalidEmail: false,
-      messageSent: false
+      messageSent: false,
+      messageNotSent: false
     };
   },
   validations: {
@@ -129,8 +140,6 @@ export default {
         message: this.message
       };
 
-      console.log(data);
-
       this.name = '';
       this.email = '';
       this.message = '';
@@ -139,10 +148,20 @@ export default {
       this.isEmptyMessage = false;
       this.isInvalidEmail = false;
 
-      this.messageSent = true;
-      setTimeout(() => {
-        this.messageSent = false;
-      }, 3000);
+      axios
+        .post('https://va-services.herokuapp.com/mazino/message', data)
+        .then(res => {
+          this.messageSent = true;
+          setTimeout(() => {
+            this.messageSent = false;
+          }, 3000);
+        })
+        .catch(err => {
+          this.messageNotSent = true;
+          setTimeout(() => {
+            this.messageNotSent = false;
+          }, 3000);
+        });
     }
   }
 };
