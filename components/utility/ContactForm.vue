@@ -1,5 +1,6 @@
 <template>
   <div class="px-2 m-auto max-w-xl">
+    <AlertMessage v-if="messageSent" message="Message sent!" />
     <h1
       class="block text-center font-bold text-4xl mb-5 leading-tight"
       for="input2"
@@ -90,7 +91,8 @@ export default {
       isEmptyName: false,
       isEmptyEmail: false,
       isEmptyMessage: false,
-      isInvalidEmail: false
+      isInvalidEmail: false,
+      messageSent: false
     };
   },
   validations: {
@@ -135,6 +137,11 @@ export default {
       this.isEmptyEmail = false;
       this.isEmptyMessage = false;
       this.isInvalidEmail = false;
+
+      this.messageSent = true;
+      setTimeout(() => {
+        this.messageSent = false;
+      }, 3000);
     }
   }
 };
