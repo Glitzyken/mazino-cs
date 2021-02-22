@@ -11,7 +11,7 @@
     <div class="text-center mt-3 md:mt-0">
       <ul class="text-mazPrime3 uppercase tracking-widest font-bold md:flex">
         <nuxt-link to="/about">
-          <li>about us</li>
+          <li>about</li>
         </nuxt-link>
         <nuxt-link to="/find">
           <li class="md:ml-10">contact</li>

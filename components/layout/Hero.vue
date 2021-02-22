@@ -30,7 +30,11 @@
             </button>
           </nuxt-link>
           <nuxt-link to="/services">
-            <Button displayTitle="book now" />
+            <button
+              class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize"
+            >
+              book now
+            </button>
           </nuxt-link>
         </div>
       </div>
