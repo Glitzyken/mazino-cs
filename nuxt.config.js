@@ -58,7 +58,13 @@ export default {
 
   fontawesome: {
     icons: {
-      solid: ['faAddressBook', 'faBars', 'faDirections', 'faCheckSquare']
+      solid: [
+        'faAddressBook',
+        'faBars',
+        'faDirections',
+        'faCheckSquare',
+        'faArrowCircleRight'
+      ]
     }
   },
   pageTransition: {

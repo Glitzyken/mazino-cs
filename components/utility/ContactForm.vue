@@ -74,6 +74,7 @@
         @click.prevent="sendMessage"
       >
         shoot
+        <span class="ml-2"><font-awesome-icon icon="arrow-circle-right"/></span>
       </button>
     </form>
   </div>
