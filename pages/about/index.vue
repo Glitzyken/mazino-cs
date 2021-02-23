@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="pb-10">
     <div class="flex mb-5">
       <img
         class="w-full"
@@ -22,22 +22,42 @@
         >
       </p>
       <div class="flex justify-center items-center">
-        <nuxt-link to="/services">
+        <nuxt-link to="/">
           <Button
             displayTitle="book a makeover appointment"
             iconName="address-book"
           />
         </nuxt-link>
       </div>
-      <div>
-        [Zino's photo]
+      <div class="flex justify-center">
+        <img class="rounded-lg w-3/4" src="../../assets/images/zino.jpg" />
       </div>
-      <div>
-        <h2>CEO</h2>
-        <p>Meet Zino Eriyamremu, CEO Mazino Makeovers.</p>
+      <div class="text-lg">
+        <h2 class="text-mazSec font-bold mb-2">Meet the CEO</h2>
+        <p class="mb-4">
+          Hi, I am Zino Eriyamremu, CEO Mazino Makeovers. I have been in the
+          beauty business for almost a decade. As a makeup artist, I get to mix
+          my two passions: unveiling the beauty of others and fine art.
+        </p>
+        <p class="mb-4">
+          I founded Mazino Makeovers in the year [year] and since then has
+          earned a remarkable reputation for being one of the best beauty
+          saloons in Lagos state, Nigeria.
+        </p>
+        <p class="mb-10">
+          Usually, a regular makeup artist will try to convince you of a 100%
+          guarantee service value verbally. That, I consider a cliche. For me, I
+          let my works speak for themselves.
+        </p>
+        <div class="flex justify-center md:justify-start">
+          <nuxt-link to="/services">
+            <Button
+              displayTitle="check out our services"
+              iconName="address-book"
+            />
+          </nuxt-link>
+        </div>
       </div>
-      TODO:
-      <h1>FOLLOW US ON INSTAGRAM</h1>
     </div>
   </div>
 </template>
