@@ -1,6 +1,7 @@
 <template>
   <div>
-    <!-- <PreLoader v-if="showHideSpinner" /> -->
+    <SplashScreen v-if="showHideSpinner" />
+    <!-- <PreLoader /> -->
 
     <div class="bg-gradient-to-br from-mazGray1 to-mazGray2 min-h-screen">
       <div
@@ -19,7 +20,7 @@
   </div>
 </template>
 
-<!-- <script>
+<script>
 export default {
   beforeCreate() {
     this.showHideSpinner = true;
@@ -33,7 +34,7 @@ export default {
     };
   }
 };
-</script> -->
+</script>
 
 <style>
 .page-enter-active,
