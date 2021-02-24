@@ -45,8 +45,8 @@
           saloons in Lagos state, Nigeria.
         </p>
         <p class="mb-10">
-          Usually, a regular makeup artist will try to convince you of a 100%
-          guarantee service value verbally. That, I consider a cliche. For me, I
+          Usually, a regular makeup artist would verbally try to convince you of
+          a 100% guarantee service value. That, I consider a cliche. For me, I
           let my works speak for themselves.
         </p>
         <div class="flex justify-center md:justify-start">
