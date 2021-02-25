@@ -26,7 +26,7 @@
           {{ year }}
           All rights reserved | Mazino Makeovers
         </p>
-        <p>FOLLOW US ON INSTAGRAM</p>
+        <!-- <font-awesome-icon icon="instagram" /> -->
       </div>
     </div>
   </footer>

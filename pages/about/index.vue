@@ -40,9 +40,9 @@
           my two passions: unveiling the beauty of others and fine art.
         </p>
         <p class="mb-4">
-          I founded Mazino Makeovers in the year [year] and since then has
-          earned a remarkable reputation for being one of the best beauty
-          saloons in Lagos state, Nigeria.
+          I founded Mazino Makeovers in the year 2018, and since then has earned
+          a remarkable reputation for being one of the best beauty saloons in
+          Lagos state, Nigeria.
         </p>
         <p class="mb-10">
           Usually, a regular makeup artist would verbally try to convince you of
