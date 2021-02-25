@@ -37,7 +37,7 @@
         <p class="mb-4">
           Hi, I am Zino Eriyamremu, CEO Mazino Makeovers. I have been in the
           beauty business for almost a decade. As a makeup artist, I get to mix
-          my two passions: unveiling the beauty of others and fine art.
+          my two passions: transforming people and fine art.
         </p>
         <p class="mb-4">
           I founded Mazino Makeovers in the year 2018, and since then has earned
@@ -50,11 +50,8 @@
           let my works speak for themselves.
         </p>
         <div class="flex justify-center md:justify-start">
-          <nuxt-link to="/services">
-            <Button
-              displayTitle="check out our services"
-              iconName="address-book"
-            />
+          <nuxt-link to="/pricing">
+            <Button displayTitle="check out our pricing" iconName="tag" />
           </nuxt-link>
         </div>
       </div>

@@ -60,7 +60,8 @@ export default {
         'faDirections',
         'faCheckSquare',
         'faArrowCircleRight',
-        'faBug'
+        'faBug',
+        'faTag'
       ]
     }
   },
