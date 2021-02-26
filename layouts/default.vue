@@ -7,8 +7,7 @@
       <div
         class="bg-gradient-to-br from-mazPrime2 to-mazPrime1 md:max-w-6xl md:m-auto p-2 md:p-8 text-mazGray1 md:shadow-2xl"
       >
-        <div class="md:flex">
-          <div></div>
+        <div class="md:flex mb-32">
           <div class="md:flex-1">
             <TheNavBar />
             <Nuxt />

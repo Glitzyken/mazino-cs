@@ -1,7 +1,10 @@
 <template>
   <main>
-    <Hero />
-    TODO:
-    <h1>BOOKING FORM</h1>
+    <section class="mb-20">
+      <Hero />
+    </section>
+    <section>
+      <ContactForm />
+    </section>
   </main>
 </template>

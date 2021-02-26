@@ -71,7 +71,7 @@
         id="message"
         class="w-full border-none px-4 py-2 rounded outline-none resize-none bg-mazGray2 whitespace-pre"
         type="text"
-        placeholder="Hi, I think we need a colaboration. How soon can you discuss this?"
+        placeholder="Hi, I think we need a collaboration. How soon can you discuss this?"
         rows="4"
         @input="$v.message.$touch()"
         v-model="message"
