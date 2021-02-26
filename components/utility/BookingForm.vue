@@ -10,15 +10,15 @@
       message="Something went wrong"
       iconName="bug"
     />
-    <h1 class="block text-center font-bold text-4xl mb-5 leading-tight">
-      Send Zino a
-      <span class="text-5xl text-mazSec font-extrabold">
-        [message]
-      </span>
+    <h1
+      class="block text-center font-bold text-4xl mb-5 leading-tight capitalize"
+    >
+      Book an appointment
     </h1>
 
     <h2 class="text-2xl text-center mx-5 mb-5 md:mx-10 leading-8">
-      Got a question or proposal, or just want to say hello? Go ahead.
+      We are open Monday to Friday <br />
+      8:00AM - 6:00PM
     </h2>
 
     <form class="mt-10">
@@ -29,7 +29,7 @@
         >Your Name
       </label>
       <p v-if="isEmptyName" class="text-mazSec">
-        My name is Zino. What's your name? 🙃
+        We need to know who you are. 🙃
       </p>
       <input
         id="name"
@@ -47,7 +47,7 @@
         An invalid email won't work. 😉
       </p>
       <p v-if="isEmptyEmail" class="text-mazSec">
-        An empty email can't be useful, you know. 😊
+        We need your email to know it is coming from you. 😊
       </p>
       <input
         id="email"
@@ -58,28 +58,41 @@
         v-model="email"
       />
 
-      <label class="text-mazSec text-xl font-bold" for="message"
-        >Your Message</label
+      <label class="text-mazSec text-xl font-bold" for="number"
+        >Phone Number</label
       >
-      <p v-if="isEmptyMessage" class="text-mazSec">
-        I really want to hear something from you. 😀
+      <p v-if="isEmptyNumber" class="text-mazSec">
+        Your phone number is safe with us. ☑
       </p>
-      <textarea
-        id="message"
-        class="w-full border-none px-4 py-2 rounded outline-none resize-none bg-mazGray2 whitespace-pre"
-        type="text"
-        placeholder="Hi, I think we need a collaboration. How soon can you discuss this?"
-        rows="4"
-        @input="$v.message.$touch()"
-        v-model="message"
-      ></textarea>
+      <input
+        id="number"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        type="number"
+        placeholder="08030291829"
+        @input="$v.number.$touch()"
+        v-model="number"
+      />
+
+      <label class="text-mazSec text-xl font-bold" for="date">Date</label>
+      <input
+        id="date"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2 datepicker-input"
+        type="date"
+      />
+
+      <label class="text-mazSec text-xl font-bold" for="time">Time</label>
+      <input
+        id="time"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        type="time"
+      />
 
       <button
         class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize mt-4 w-full"
         type="submit"
-        @click.prevent="sendMessage"
+        @click.prevent="sendBooking"
       >
-        shoot
+        book
         <span class="ml-2"><font-awesome-icon icon="arrow-circle-right"/></span>
       </button>
     </form>
@@ -95,10 +108,10 @@ export default {
     return {
       name: '',
       email: '',
-      message: '',
+      number: '',
       isEmptyName: false,
       isEmptyEmail: false,
-      isEmptyMessage: false,
+      isEmptyNumber: false,
       isInvalidEmail: false,
       messageSent: false,
       messageNotSent: false
@@ -112,12 +125,12 @@ export default {
       required,
       email
     },
-    message: {
+    number: {
       required
     }
   },
   methods: {
-    sendMessage() {
+    sendBooking() {
       if (!this.$v.name.required) {
         return (this.isEmptyName = true);
       }
@@ -127,39 +140,43 @@ export default {
       if (!this.$v.email.email) {
         return (this.isInvalidEmail = true);
       }
-      if (!this.$v.message.required) {
-        return (this.isEmptyMessage = true);
+      if (!this.$v.number.required) {
+        return (this.isEmptyNumber = true);
       }
 
       const data = {
         name: this.name,
         email: this.email,
-        message: this.message
+        number: this.number
       };
 
       this.name = '';
       this.email = '';
-      this.message = '';
+      this.number = '';
       this.isEmptyName = false;
       this.isEmptyEmail = false;
-      this.isEmptyMessage = false;
+      this.isEmptyNumber = false;
       this.isInvalidEmail = false;
 
-      axios
-        .post('https://va-services.herokuapp.com/mazino/message', data)
-        .then(res => {
-          this.messageSent = true;
-          setTimeout(() => {
-            this.messageSent = false;
-          }, 3000);
-        })
-        .catch(err => {
-          this.messageNotSent = true;
-          setTimeout(() => {
-            this.messageNotSent = false;
-          }, 3000);
-        });
+      console.log(data);
+
+      //   axios
+      //     .post('https://va-services.herokuapp.com/mazino/message', data)
+      //     .then(res => {
+      //       this.messageSent = true;
+      //       setTimeout(() => {
+      //         this.messageSent = false;
+      //       }, 3000);
+      //     })
+      //     .catch(err => {
+      //       this.messageNotSent = true;
+      //       setTimeout(() => {
+      //         this.messageNotSent = false;
+      //       }, 3000);
+      //     });
     }
   }
 };
 </script>
+
+<style scoped></style>

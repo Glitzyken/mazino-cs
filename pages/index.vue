@@ -4,7 +4,7 @@
       <Hero />
     </section>
     <section>
-      <ContactForm />
+      <BookingForm />
     </section>
   </main>
 </template>

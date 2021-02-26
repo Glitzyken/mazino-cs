@@ -61,7 +61,8 @@ export default {
         'faCheckSquare',
         'faArrowCircleRight',
         'faBug',
-        'faTag'
+        'faTag',
+        'faCalendarDay'
       ]
     }
   },
