@@ -44,7 +44,7 @@
           let my works speak for themselves.
         </p>
         <div class="flex justify-center md:justify-start">
-          <nuxt-link to="/">
+          <nuxt-link :to="{ path: '/', hash: '#booking' }">
             <Button
               displayTitle="book a makeover appointment"
               iconName="address-book"

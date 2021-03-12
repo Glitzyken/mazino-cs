@@ -4,7 +4,7 @@
       <Hero />
     </section>
     <section class="grid grid-cols-1 md:grid-cols-3 md:gap-8">
-      <div class="md:col-span-2">
+      <div id="booking" class="md:col-span-2">
         <BookingForm />
       </div>
       <div class="bg-mazPrime2 mt-10 md:mt-32">
