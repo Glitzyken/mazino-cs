@@ -7,7 +7,7 @@
     />
     <AlertMessage
       v-if="messageNotSent"
-      message="Something went wrong"
+      message="Something went wrong."
       iconName="bug"
     />
     <h1 class="block text-center font-bold text-4xl mb-5 leading-tight">

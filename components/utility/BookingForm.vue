@@ -2,12 +2,12 @@
   <div class="px-2">
     <AlertMessage
       v-if="messageSent"
-      message="Message sent!"
+      message="Booked successfully!"
       iconName="check-square"
     />
     <AlertMessage
       v-if="messageNotSent"
-      message="Something went wrong"
+      message="Something went wrong."
       iconName="bug"
     />
     <h1
@@ -18,12 +18,12 @@
 
     <h2 class="text-2xl text-center mx-5 mb-5 md:mx-10 leading-8">
       We are open Monday to Friday <br />
-      8:00AM - 6:00PM
+      <span class="text-mazSec"> 8:00AM - 6:00PM </span>
     </h2>
 
     <form class="mt-10">
       <label class="text-mazSec text-xl font-bold" for="name" v-if="name"
-        >Nice to meet you {{ name }} 👋
+        >Hello {{ name }} 👋
       </label>
       <label class="text-mazSec text-xl font-bold" for="name" v-else
         >Your Name
@@ -74,17 +74,27 @@
       />
 
       <label class="text-mazSec text-xl font-bold" for="date">Date</label>
+      <p v-if="isEmptyDate" class="text-mazSec">
+        Please, select a date. 😊
+      </p>
       <input
         id="date"
         class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2 datepicker-input"
         type="date"
+        @input="$v.date.$touch()"
+        v-model="date"
       />
 
       <label class="text-mazSec text-xl font-bold" for="time">Time</label>
+      <p v-if="isEmptyTime" class="text-mazSec">
+        Please, select a time. 😊
+      </p>
       <input
         id="time"
         class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="time"
+        @input="$v.time.$touch()"
+        v-model="time"
       />
 
       <button
@@ -109,9 +119,13 @@ export default {
       name: '',
       email: '',
       number: '',
+      date: null,
+      time: null,
       isEmptyName: false,
       isEmptyEmail: false,
       isEmptyNumber: false,
+      isEmptyDate: false,
+      isEmptyTime: false,
       isInvalidEmail: false,
       messageSent: false,
       messageNotSent: false
@@ -126,6 +140,12 @@ export default {
       email
     },
     number: {
+      required
+    },
+    date: {
+      required
+    },
+    time: {
       required
     }
   },
@@ -143,11 +163,19 @@ export default {
       if (!this.$v.number.required) {
         return (this.isEmptyNumber = true);
       }
+      if (!this.$v.date.required) {
+        return (this.isEmptyDate = true);
+      }
+      if (!this.$v.time.required) {
+        return (this.isEmptyTime = true);
+      }
 
       const data = {
         name: this.name,
         email: this.email,
-        number: this.number
+        number: this.number,
+        date: this.date,
+        time: this.time
       };
 
       this.name = '';
@@ -156,12 +184,14 @@ export default {
       this.isEmptyName = false;
       this.isEmptyEmail = false;
       this.isEmptyNumber = false;
+      this.isEmptyDate = false;
+      this.isEmptyTime = false;
       this.isInvalidEmail = false;
 
       console.log(data);
 
       //   axios
-      //     .post('https://va-services.herokuapp.com/mazino/message', data)
+      //     .post('https://va-services.herokuapp.com/mazino/booking', data)
       //     .then(res => {
       //       this.messageSent = true;
       //       setTimeout(() => {
@@ -174,9 +204,15 @@ export default {
       //         this.messageNotSent = false;
       //       }, 3000);
       //     });
+
+      /*
+      
+      Sample Payload:
+      
+      {name: "Kenneth Jimmy", email: "kenjimmy17@gmail.com", number: "08139113069", date: "2021-03-17", time: "19:09"}
+      
+      */
     }
   }
 };
 </script>
-
-<style scoped></style>
