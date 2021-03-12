@@ -1,11 +1,13 @@
 <template>
-  <div>
+  <div class="text-center">
     <h1 class="block text-center font-bold text-4xl mb-5 leading-tight">
-      Watch a slide of
       <span class="text-5xl text-mazSec font-extrabold">
-        [our awesome customers]
+        [Coming Soon]
       </span>
     </h1>
+    <a href="http://instagram.com/mazinomakeovers">
+      <Button displayTitle=" Follow us on Instagram" iconName="hashtag" />
+    </a>
   </div>
 </template>
 

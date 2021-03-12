@@ -62,7 +62,8 @@ export default {
         'faArrowCircleRight',
         'faBug',
         'faTag',
-        'faMapMarkerAlt'
+        'faMapMarkerAlt',
+        'faHashtag'
       ]
     }
   },

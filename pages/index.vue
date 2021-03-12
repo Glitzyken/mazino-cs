@@ -12,6 +12,7 @@
           class="bg-mazGray1 text-mazPrime1 text-xl font-bold py-2 px-5 capitalize"
         >
           price list <font-awesome-icon icon="tag" />
+          <span class="text-mazPrime1 text-sm">(estimated)</span>
         </div>
       </div>
     </section>
