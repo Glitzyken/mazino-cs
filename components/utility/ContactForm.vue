@@ -33,7 +33,7 @@
       </p>
       <input
         id="name"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="text"
         placeholder="Victoria Eloho"
         @input="$v.name.$touch()"
@@ -51,7 +51,7 @@
       </p>
       <input
         id="email"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="email"
         placeholder="you@example.com"
         @input="$v.email.$touch()"
@@ -66,7 +66,7 @@
       </p>
       <textarea
         id="message"
-        class="w-full border-none px-4 py-2 rounded outline-none resize-none bg-mazGray2 whitespace-pre"
+        class="w-full border-none px-4 py-2 rounded outline-none resize-none bg-mazPrime2 whitespace-pre"
         type="text"
         placeholder="Hi, I think we need a collaboration. How soon can you discuss this?"
         rows="4"

@@ -62,7 +62,7 @@ export default {
         'faArrowCircleRight',
         'faBug',
         'faTag',
-        'faCalendarDay'
+        'faMapMarkerAlt'
       ]
     }
   },

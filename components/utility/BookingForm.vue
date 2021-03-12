@@ -1,5 +1,5 @@
 <template>
-  <div class="px-2 m-auto max-w-xl">
+  <div class="px-2">
     <AlertMessage
       v-if="messageSent"
       message="Message sent!"
@@ -33,7 +33,7 @@
       </p>
       <input
         id="name"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="text"
         placeholder="Victoria Eloho"
         @input="$v.name.$touch()"
@@ -51,7 +51,7 @@
       </p>
       <input
         id="email"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="email"
         placeholder="you@example.com"
         @input="$v.email.$touch()"
@@ -66,7 +66,7 @@
       </p>
       <input
         id="number"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="number"
         placeholder="08030291829"
         @input="$v.number.$touch()"
@@ -76,14 +76,14 @@
       <label class="text-mazSec text-xl font-bold" for="date">Date</label>
       <input
         id="date"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2 datepicker-input"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2 datepicker-input"
         type="date"
       />
 
       <label class="text-mazSec text-xl font-bold" for="time">Time</label>
       <input
         id="time"
-        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazGray2"
+        class="w-full border-none px-4 py-2 rounded outline-none mb-4 bg-mazPrime2"
         type="time"
       />
 

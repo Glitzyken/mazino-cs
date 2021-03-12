@@ -10,24 +10,18 @@
     <h1 class="text-center font-bold text-4xl mb-5 leading-tight">
       We are <span class="text-6xl text-mazSec font-extrabold"> [classy] </span>
     </h1>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-      <p class="text-lg">
-        <span class="text-mazSec"
-          >Mazino Makeovers is not just a regular beauty saloon.</span
-        >
-        At Mazino Makeovers, we thrive to be the best and give you the very best
-        makeover with a pleasant experience you would hardly forget.
-        <span class="text-mazSec"
-          >You are more than a guest. You are our model.</span
-        >
-      </p>
-      <div class="flex justify-center items-center">
-        <nuxt-link to="/">
-          <Button
-            displayTitle="book a makeover appointment"
-            iconName="address-book"
-          />
-        </nuxt-link>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:pr-10 md:pl-10">
+      <div class="md:col-span-2">
+        <p class="text-lg">
+          <span class="text-mazSec"
+            >Mazino Makeovers is not just a regular beauty saloon.</span
+          >
+          At Mazino Makeovers, we thrive to be the best and give you the very
+          best makeover with a pleasant experience you would hardly forget.
+          <span class="text-mazSec"
+            >You are more than a guest. You are our model.</span
+          >
+        </p>
       </div>
       <div class="flex justify-center">
         <img class="rounded-lg w-3/4" src="../../assets/images/zino.jpg" />
@@ -50,8 +44,11 @@
           let my works speak for themselves.
         </p>
         <div class="flex justify-center md:justify-start">
-          <nuxt-link to="/pricing">
-            <Button displayTitle="check out our pricing" iconName="tag" />
+          <nuxt-link to="/">
+            <Button
+              displayTitle="book a makeover appointment"
+              iconName="address-book"
+            />
           </nuxt-link>
         </div>
       </div>
