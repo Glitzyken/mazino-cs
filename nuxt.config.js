@@ -7,14 +7,18 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title:
+      'Mazino Makeovers || Book a makeover appointment with the best beauty saloon in Lagos.',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
-        hid: 'description',
-        name: 'description',
-        content: process.env.npm_package_description || ''
+        hid:
+          'Mazino Makeovers is not just a regular beauty saloon. At Mazino Makeovers, we thrive to be the best and give you the very best makeover with a pleasant experience you would hardly forget. You are more than a guest. You are our model.',
+        name:
+          'Mazino Makeovers is not just a regular beauty saloon. At Mazino Makeovers, we thrive to be the best and give you the very best makeover with a pleasant experience you would hardly forget. You are more than a guest. You are our model.',
+        content:
+          'Hi, I am Zino Eriyamremu, CEO Mazino Makeovers. I have been in the beauty business for almost a decade. As a makeup artist, I get to mix my two passions: transforming people and fine art.\nI founded Mazino Makeovers in the year 2018, and since then has earned a remarkable reputation for being one of the best beauty saloons in Lagos state, Nigeria.\nUsually, a regular makeup artist would verbally try to convince you of a 100% guarantee service value. That, I consider a cliche. For me, I let my works speak for themselves.'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
