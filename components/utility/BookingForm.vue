@@ -101,6 +101,16 @@
         class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize mt-4 w-full"
         type="submit"
         @click.prevent="sendBooking"
+        v-if="isSending"
+      >
+        <Rolling />
+      </button>
+
+      <button
+        class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize mt-4 w-full"
+        type="submit"
+        @click.prevent="sendBooking"
+        v-else
       >
         book
         <span class="ml-2"><font-awesome-icon icon="arrow-circle-right"/></span>
@@ -119,8 +129,8 @@ export default {
       name: '',
       email: '',
       number: '',
-      date: null,
-      time: null,
+      date: '',
+      time: '',
       isEmptyName: false,
       isEmptyEmail: false,
       isEmptyNumber: false,
@@ -128,7 +138,8 @@ export default {
       isEmptyTime: false,
       isInvalidEmail: false,
       messageSent: false,
-      messageNotSent: false
+      messageNotSent: false,
+      isSending: false
     };
   },
   validations: {
@@ -174,8 +185,8 @@ export default {
         name: this.name,
         email: this.email,
         number: this.number,
-        date: this.date,
-        time: this.time
+        date: this.$moment(this.date).format('dddd, MMMM Do YYYY'),
+        time: this.$moment(this.time, 'HH:mm').format('hh:mm A')
       };
 
       this.name = '';
@@ -188,30 +199,24 @@ export default {
       this.isEmptyTime = false;
       this.isInvalidEmail = false;
 
-      console.log(data);
+      this.isSending = true;
 
-      //   axios
-      //     .post('https://va-services.herokuapp.com/mazino/booking', data)
-      //     .then(res => {
-      //       this.messageSent = true;
-      //       setTimeout(() => {
-      //         this.messageSent = false;
-      //       }, 3000);
-      //     })
-      //     .catch(err => {
-      //       this.messageNotSent = true;
-      //       setTimeout(() => {
-      //         this.messageNotSent = false;
-      //       }, 3000);
-      //     });
-
-      /*
-      
-      Sample Payload:
-      
-      {name: "Kenneth Jimmy", email: "kenjimmy17@gmail.com", number: "08139113069", date: "2021-03-17", time: "19:09"}
-      
-      */
+      axios
+        .post('https://va-services.herokuapp.com/mazino/book', data)
+        .then(res => {
+          this.messageSent = true;
+          this.isSending = false;
+          setTimeout(() => {
+            this.messageSent = false;
+          }, 3000);
+        })
+        .catch(err => {
+          this.messageNotSent = true;
+          this.isSending = false;
+          setTimeout(() => {
+            this.messageNotSent = false;
+          }, 3000);
+        });
     }
   }
 };

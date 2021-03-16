@@ -77,7 +77,17 @@
       <button
         class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize mt-4 w-full"
         type="submit"
+        @click.prevent="sendBooking"
+        v-if="isSending"
+      >
+        <Rolling />
+      </button>
+
+      <button
+        class="bg-mazSec hover:bg-mazPrime3 hover:text-mazGray1 transition-all duration-300 focus:outline-none text-mazPrime1 font-bold py-2 px-5 capitalize mt-4 w-full"
+        type="submit"
         @click.prevent="sendMessage"
+        v-else
       >
         shoot
         <span class="ml-2"><font-awesome-icon icon="arrow-circle-right"/></span>
@@ -101,7 +111,8 @@ export default {
       isEmptyMessage: false,
       isInvalidEmail: false,
       messageSent: false,
-      messageNotSent: false
+      messageNotSent: false,
+      isSending: false
     };
   },
   validations: {
@@ -145,16 +156,20 @@ export default {
       this.isEmptyMessage = false;
       this.isInvalidEmail = false;
 
+      this.isSending = true;
+
       axios
         .post('https://va-services.herokuapp.com/mazino/message', data)
         .then(res => {
           this.messageSent = true;
+          this.isSending = false;
           setTimeout(() => {
             this.messageSent = false;
           }, 3000);
         })
         .catch(err => {
           this.messageNotSent = true;
+          this.isSending = false;
           setTimeout(() => {
             this.messageNotSent = false;
           }, 3000);

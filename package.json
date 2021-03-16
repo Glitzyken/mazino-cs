@@ -19,6 +19,7 @@
     "vuelidate": "^0.7.6"
   },
   "devDependencies": {
+    "@nuxtjs/moment": "^1.6.1",
     "@nuxtjs/tailwindcss": "^2.0.0"
   }
 }
